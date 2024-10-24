@@ -98,7 +98,7 @@ public class UserDaoJDBCImpl implements UserDao {
         try {
             Connection connection = util.getConnection();
             Statement statement = connection.createStatement();
-            statement.executeQuery(truncateTable);
+            statement.executeUpdate(truncateTable);
             statement.close();
         } catch (SQLException e) {
             System.out.println("Таблица пуста");
